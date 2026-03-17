@@ -1,0 +1,28 @@
+header { 
+    text-align: right; 
+}
+
+img {
+    width: 10%; 
+}
+
+.mayuscula { 
+    font-size: 1.2em; 
+}
+
+#EN { 
+    font-size: 0.8em; 
+}
+
+h1 {
+    color: rgb(22, 59, 95);
+    font-family: "Encode Sans SC", sans-serif;
+    text-align: center;
+}
+
+#linea1 {
+    width: 100%;
+    background-color: rgb(210, 154, 52);
+    height: 2px;
+    border: none;
+}
