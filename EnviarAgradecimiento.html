@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Iván Rodríguez Gómez-Landero">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+        <title>Enviar Un Agradecimiento</title>
+    </head>
+    <body>
+        
+        <!-- Imagen -->
+        <header>
+            <img src="foto.png" alt="Jesuitas.png">
+        </header>
+
+        <!-- Titulo -->
+        <h1><span class="mayuscula">E</span>NVIAR UN <span class="mayuscula">A</span>GRADECIMIENTO</h1>
+        
+        <!-- Linea -->
+        <hr id="linea2">
+
+        <!-- Menu -->
+        <nav class="menu">
+            <a href="EnviarAgradecimiento.html" class="boton_transparente activo">Agradecer</a>
+            <a href="RecibirAgradecimiento.html" class="boton_transparente">Recibir</a>
+            <a href="logout.php" class="boton_transparente">Cerrar sesión</a>
+        </nav>
+
+        <!-- Formulario -->
+        <form class="formulario" method="POST" action="guardar.php">
+            
+            <!-- Destinatario -->
+            <label for="Companero">Para: </label>
+            <select name="Companero" id="Companero" required>
+                <option value="" disabled selected>Selecciona un compañero</option>
+                <option value="1">Aitor</option>
+                <option value="2">Teresa</option>
+                <option value="3">Manuel</option>
+                <option value="4">Angelo</option>
+                <option value="5">Rosa</option>
+            </select><br><br>
+
+            <!-- Mensaje -->
+            <label for="Mensaje">Mensaje: </label><br>
+            <textarea id="Mensaje" name="Mensaje" placeholder="Escribe aquí tu mensaje de agradecimiento..." required></textarea><br>
+
+            <!-- Botón de envío -->
+            <input type="submit" value="Enviar" id="Enviar">
+
+        </form>
+    </body>
+</html>

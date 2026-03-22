@@ -1,0 +1,176 @@
+/* Cabecera */
+header { 
+    text-align: right; 
+}
+
+/* Imagen */
+img {
+    width: 10%; 
+}
+
+/* Letras */
+.mayuscula { 
+    font-size: 1.2em; 
+}
+
+/* Palabra en titulo EN */
+#EN { 
+    font-size: 0.8em; 
+}
+
+/* Titulo */
+h1 {
+    color: rgb(22, 59, 95);
+    font-family: "Encode Sans SC", sans-serif;
+    text-align: center;
+}
+
+/* Linea 1 */
+#linea1 { 
+    width: 11%; 
+    background-color: rgb(210, 154, 52); 
+    height: 3px; 
+    border: none; 
+}
+
+/* Linea 2 */
+#linea2 {
+    width: 100%;
+    background-color: rgb(210, 154, 52);
+    height: 2px;
+    border: none;
+}
+
+/* Menu */
+.menu {
+    margin-top: 20px;
+    background-color: rgb(252, 247, 239);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Botones */
+.boton_transparente {
+    text-decoration: none;
+    color: rgb(22, 59, 95);
+    padding: 10px 15px;
+    font-family: "Encode Sans SC", sans-serif;
+    position: relative;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Hover */
+.boton_transparente:hover {
+    color: rgb(210, 154, 52);
+}
+
+/* Activo */
+.activo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(210, 154, 52);
+}
+
+/* Formulario */
+.formulario {
+    box-shadow: 0px 0px 10px rgb(22, 59, 95);
+    font-family: 'Open Sans', sans-serif;
+    width: 350px;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+/* Etiquetas */
+.formulario label {
+    color: rgb(33, 31, 31);
+    font-size: 13px;
+}
+
+/* Inputs */
+input, textarea, select {
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Boton enviar */
+#Enviar {
+    background-color: rgb(22, 59, 95);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Subtitulo */
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    color: rgb(22, 59, 95);
+    margin: 30px 0;
+}
+
+/* Contenedor */
+.contenedor {
+    text-align: center;
+}
+
+/* Tarjeta */
+.jesuita {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    padding: 15px;
+    background-color: #f5efe6;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin-right: 30px;
+}
+
+/* Imagen tarjeta */
+.jesuita img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Texto tarjeta */
+.jesuita h3 {
+    margin-top: 10px;
+    color: rgb(22, 59, 95);
+}
+
+/* Texto */
+.jesuita p {
+    font-size: 14px;
+}
+
+/* Mensaje */
+.mensaje {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    font-size: 26px;
+}
+
+/* Texto final */
+.final {
+    font-weight: bold;
+    margin-top: 15px;
+}
