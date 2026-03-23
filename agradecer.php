@@ -1,26 +1,31 @@
 <?php
+    //Conectamos con la datos de la base de datos
+    require 'configdb.php';  
 
-    require "configdb.php";
+    //Al llamar a esta funcion conectamos con la base de datos
     function conectar(){
-        $conexion=new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
+        $conexion = new mysqli(SERVIDOR,USUARIO,PASSWORD,BBDD);
         $conexion->set_charset("utf8");
         return $conexion;
     }
 
     function mostrarAlumnos(){
         $conexion=conectar();
-        $sql="SELECT * FROM alumnos";
-        $resultado=$conexion->query($sql);
-        $total_filas=$resultado->num_rows;
 
+        //Creamos una variable con la consulta
+        $sql="SELECT NIA, nombre FROM Alumnos";
+
+        //Lo que este dentro del parentesis se realizara como consulta
+        $resultado=$conexion->query($sql);
+
+        //Mientras fila sea true sigue ejecutando
         while($fila=$resultado->fetch_array()){
-            echo "<p>";
-            echo $fila["idAlumno"]." - ".$fila["nombre"];
-            echo "</p>";
+            //<option value="01">Juan</option>
+            echo '<option value="'.$fila["NIA"].'">'.$fila["nombre"].'</option>';
         }
 
+        //Cerramos conexion con la base de datos
         $conexion->close();
-        return $total_filas;
     }
 
 ?>
@@ -57,13 +62,13 @@
         </nav>
 
         <!-- Formulario -->
-        <form class="formulario" method="POST" action="enviar.php">
+        <form class="formulario" method="POST" action="iniciodesesion.php">
             
             <!-- Destinatario -->
-            <label for="Companero">Para: </label>
-            <select name="Companero" id="Companero" required>
+            <label for="usuario">Para: </label>
+            <select name="usuario" id="usuario" required>
                 <?php
-                    mostrar_alumnos();
+                   mostrarAlumnos();
                 ?>
             </select><br><br>
 
